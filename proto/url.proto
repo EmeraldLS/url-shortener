@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package url_shortener;
+
+option go_package="./out";
+
+message URL{
+    string id = 1;
+    string original_url = 2;
+    string short_url = 3;
+    string created_at = 4;
+    int32 no_of_clicks = 5;
+}
+
+message URL_SHORTENER_REQUEST{
+    string original_url = 1;
+}
